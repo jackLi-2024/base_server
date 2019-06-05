@@ -8,6 +8,3 @@ else
     echo "[INFO] stop uwsgi server ok."
 fi
 
-# ps -ef|grep fresh_msg.py | awk '{print $2}' | xargs kill -9
-
-

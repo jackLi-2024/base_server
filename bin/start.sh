@@ -17,7 +17,7 @@ fi
 #fi
 
 # 2.0 start web api
-nohup uwsgi conf/uwsgi.conf  &
+nohup uwsgi uwsgi.ini  &
 if [ $? -ne 0 ];
 then
     echo "[ERROR] start uwsgi server failed."
@@ -27,4 +27,5 @@ else
 fi
 
 echo "server is ready."
+
 

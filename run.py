@@ -20,13 +20,9 @@ except:
     pass
 
 from webserver_extentions import run
-from werkzeug.utils import import_string
 
-
-def test_flask():
-    config = import_string("config")
-    run.flask_run(config=config)
-
+flaskapp = run.FlaskApp("config")
+app = flaskapp.app
 
 if __name__ == '__main__':
-    test_flask()
+    flaskapp.run()
