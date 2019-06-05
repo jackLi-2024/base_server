@@ -15,7 +15,7 @@ import json
 
 from webserver_extentions.common.log import get_log
 
-logging = get_log("../conf/logging.conf")
+logging = get_log("conf/logging.conf")
 
 try:
     reload(sys)

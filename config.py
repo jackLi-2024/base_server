@@ -30,5 +30,8 @@ flask_route = {
 flask_settings = {
     "static_url_path": None,
     "static_folder": "static",
-    "template_folder": "templates"
+    "template_folder": "templates",
+    "host": "0.0.0.0",
+    "port": 6000,
+    "debug": True
 }
