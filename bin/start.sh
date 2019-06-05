@@ -1,5 +1,3 @@
-
-
 if [ ! -d log ];
 then
     mkdir log

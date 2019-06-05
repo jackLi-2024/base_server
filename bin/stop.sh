@@ -8,3 +8,5 @@ else
     echo "[INFO] stop uwsgi server ok."
 fi
 
+rm -rf server.pid
+rm -rf nohup.out
