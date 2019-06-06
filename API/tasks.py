@@ -26,6 +26,10 @@ logging = get_log("conf/logging.conf")
 task = celeryTask.Task(config_name="conf.celeryconfig").task_from_config()
 
 
-@task.task
+@task.task(name="API.tasks.test")
 def test(a, b):
+    return a + b
+
+@task.task(name="API.tasks.test1")
+def test1(a, b):
     return a + b
