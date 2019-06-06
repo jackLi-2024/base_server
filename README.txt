@@ -20,7 +20,7 @@ git clone https://github.com/lijiacaigit/base_server.git
 开发测试环境：
     1.修改config.py，增加相关接口以及路由
     2.定义API目录下的接口
-    3.测试运行run.py
+    3.测试运行run_app.py
 
 部署环境：
     1.修改uwsgi.ini，主要修改端口号，防止端口号被占用等异常
