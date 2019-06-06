@@ -25,11 +25,14 @@ except:
 
 from flask_restful import Resource
 from flask import request
+from tasks import test
 
 
 class TestApi1(Resource):
     def get(self, id):
-        return id
+        arg = request.args
+        result = test(id, 3)
+        return {"id": id, "sum(id + 3)": result}
 
     def deal(self, params):
         return params
@@ -37,5 +40,6 @@ class TestApi1(Resource):
 
 class TestApi2(Resource):
     def get(self):
+
         logging.error("hahah")
         return {"result": "I am api_2"}

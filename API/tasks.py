@@ -19,14 +19,13 @@ try:
 except:
     pass
 
-from celery import Celery
-from werkzeug.utils import import_string
-
 from webserver_extentions.extention import celeryTask
+from webserver_extentions.common.log import get_log
 
-task = celeryTask.Task(config_name="task.celeryconfig").task_from_config()
+logging = get_log("conf/logging.conf")
+task = celeryTask.Task(config_name="conf.celeryconfig").task_from_config()
+
 
 @task.task
-def test():
-    pass
-
+def test(a, b):
+    return a + b

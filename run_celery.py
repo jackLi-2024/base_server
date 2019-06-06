@@ -20,4 +20,4 @@ except:
     pass
 
 if __name__ == '__main__':
-    os.system("celery -A task.tasks worker --loglevel=info -P eventlet")
+    os.system("celery -A API.tasks worker --loglevel=info -P eventlet")

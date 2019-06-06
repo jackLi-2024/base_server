@@ -2,6 +2,7 @@
 	该目录包含配置文件如下
 	logging.conf  //日志配置文件
 	database.conf // 数据库配置文件
+	celeryconfig.py // celery配置
 
 2.API目录
 	该目录定义业务所需要的API接口
@@ -12,8 +13,7 @@
 
 4.uwsgi.conf
         	uwsgi配置做高并发
-5.task目录
-	针对高并发时，采用celery进行任务调度
+
 
 
 git clone https://github.com/lijiacaigit/base_server.git
@@ -25,7 +25,7 @@ git clone https://github.com/lijiacaigit/base_server.git
 部署环境：
     1.修改uwsgi.ini，主要修改端口号，防止端口号被占用等异常
 
-如果需要使用celery进行任务调度，请在task目录下增加任务类型
+如果需要使用celery进行任务调度，请在API.tasks中增加任务类型
 	运行：run_celery.py
 
 

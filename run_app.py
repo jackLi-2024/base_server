@@ -26,7 +26,6 @@ from flask import abort
 flaskapp = run.FlaskApp("config")
 app = flaskapp.app
 
-
 if __name__ == '__main__':
     flaskapp.run()
     # flaskapp.aysnc_run()
