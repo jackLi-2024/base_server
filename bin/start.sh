@@ -5,7 +5,7 @@ fi
 
 
 # 1.0 start celery worker.
-nohup python -m celery -A API.tasks worker --loglevel=info --logfile=./log/celery.log --pidfile=celery.pid &
+nohup celery -A API.tasks worker --loglevel=info --logfile=./log/celery.log --pidfile=celery.pid &
 if [ $? -ne 0 ];
 then
     echo "[ERROR] start celery worker failed."

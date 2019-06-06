@@ -25,6 +25,10 @@ except:
 
 from flask_restful import Resource
 from flask import request
+
+cur_dir = os.path.split(os.path.realpath(__file__))[0]
+sys.path.append("%s/../API/" % cur_dir)
+
 from tasks import test
 
 
@@ -40,6 +44,5 @@ class TestApi1(Resource):
 
 class TestApi2(Resource):
     def get(self):
-
         logging.error("hahah")
         return {"result": "I am api_2"}
