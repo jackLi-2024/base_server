@@ -19,10 +19,5 @@ try:
 except:
     pass
 
-from webserver_extentions import run
-
-flaskapp = run.FlaskApp("config")
-app = flaskapp.app
-
 if __name__ == '__main__':
-    flaskapp.run()
+    os.system("celery -A task.tasks worker --loglevel=info -P eventlet")

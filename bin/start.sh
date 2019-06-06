@@ -3,16 +3,16 @@ then
     mkdir log
 fi
 
-# 1.0 start celery worker.
-#nohup python -m celery -A src.task worker --loglevel=info -f ./log/celery.log &
 
-#if [ $? -ne 0 ];
-#then
-#    echo "[ERROR] start celery worker failed."
-#    exit -1
-#else
-#    echo "[INFO] start celery worker ok."
-#fi
+# 1.0 start celery worker.
+nohup python -m celery -A task.task worker --loglevel=info --logfile=./log/celery.log --pidfile=celery.pid &
+if [ $? -ne 0 ];
+then
+    echo "[ERROR] start celery worker failed."
+    exit -1
+else
+    echo "[INFO] start celery worker ok."
+fi
 
 # 2.0 start web api
 nohup uwsgi uwsgi.ini  &

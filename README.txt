@@ -12,6 +12,8 @@
 
 4.uwsgi.conf
         	uwsgi配置做高并发
+5.task目录
+	针对高并发时，采用celery进行任务调度
 
 
 git clone https://github.com/lijiacaigit/base_server.git
@@ -22,6 +24,9 @@ git clone https://github.com/lijiacaigit/base_server.git
 
 部署环境：
     1.修改uwsgi.ini，主要修改端口号，防止端口号被占用等异常
+
+如果需要使用celery进行任务调度，请在task目录下增加任务类型
+	运行：run_celery.py
 
 
 centos部署说明:

@@ -24,18 +24,18 @@ except:
     pass
 
 from flask_restful import Resource
+from flask import request
 
 
 class TestApi1(Resource):
-    def get(self):
-        logging.error("lijiacai")
-        try:
-            1 / 0
-        except:
-            logging.exception("2222")
-        return {"result": "I am api_1"}
+    def get(self, id):
+        return id
+
+    def deal(self, params):
+        return params
 
 
 class TestApi2(Resource):
     def get(self):
+        logging.error("hahah")
         return {"result": "I am api_2"}

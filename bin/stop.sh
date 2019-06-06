@@ -10,3 +10,4 @@ fi
 
 rm -rf server.pid
 rm -rf nohup.out
+#rm -rf celery.pid

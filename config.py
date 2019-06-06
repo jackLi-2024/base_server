@@ -19,10 +19,14 @@ try:
 except:
     pass
 
+celery_settings = {
+
+}
+
 flask_route = {
     "bp1":
         {
-            "API.api_example:TestApi1": "/test/api/v1",
+            "API.api_example:TestApi1": "/test/api/v1/<int:id>",
             "API.api_example:TestApi2": "/test/api/v2",
         }
 }
@@ -32,6 +36,6 @@ flask_settings = {
     "static_folder": "static",
     "template_folder": "templates",
     "host": "0.0.0.0",
-    "port": 6000,
-    "debug": True
+    "port": 5000,
+    "debug": False
 }
